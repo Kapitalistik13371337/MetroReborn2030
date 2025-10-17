@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<title>Правила Metro Reborn 2030</title>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+
+    <!-- Основной CSS -->
+ <head>
+    <meta charset="UFT-8">
+    <Meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <title>Game website</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+</head>
+
+    <!-- Свой скрипт -->
+    <script src="js/main.js" defer></script>
+<body>
+    <!-- Библиотека Bootstrap для красивого оформления -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 <!-- Bootstrap 5 + FontAwesome -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -31,8 +47,8 @@
     .sidebar i{margin-right:10px;width:18px;text-align:center;}
     .content{margin-left:280px;padding:30px;}
     .card{background:var(--card);border:none;margin-bottom:1rem;}
-    .card-header{background:var(--header);color:#fff;font-weight:bold;border-top-left-radius:.25rem;border-top-right-radius:.25rem;}
-    .card-body{color:#ccc;background:var(--card);}
+    .card-header{background:var(--header);color:#ffffff;font-weight:bold;border-top-left-radius:.25rem;border-top-right-radius:.25rem;}
+    .card-body{color:#ffffff;background:var(--card);}
     a{color:var(--link);text-decoration:none;}
     a:hover{text-decoration:underline;}
     /* Акордеон */
@@ -42,48 +58,33 @@
 </head>
 
 <body>
-<!-- Боковая панель -->
+
+    
+<!-- =====  Боковая панель (sidebar) ===== -->
 <nav class="sidebar">
-    <h4 class="text-center text-primary">Правила сервера</h4>
-    <a href="#main" data-bs-toggle="collapse" data-bs-target="#navMain"><i class="fas fa-cogs"></i>Основные правила</a>
-    <a href="#character" data-bs-toggle="collapse" data-bs-target="#navCharacter"><i class="fas fa-user-tag"></i>Создание персонажа</a>
-    <a href="#identification" data-bs-toggle="collapse" data-bs-target="#navIdentification"><i class="fas fa-id-badge"></i>Идентификация</a>
-    <a href="#chat" data-bs-toggle="collapse" data-bs-target="#navChat"><i class="fas fa-comments"></i>Чат</a>
-    <a href="#harm" data-bs-toggle="collapse" data-bs-target="#navHarm"><i class="fas fa-skull-crossbones"></i>Вред серверу</a>
-    <a href="#nonrpfun" data-bs-toggle="collapse" data-bs-target="#navNonRPFun"><i class="fas fa-gamepad"></i>Non‑RP / Fun RP</a>
-    <a href="#leaverp" data-bs-toggle="collapse" data-bs-target="#navLeaveRP"><i class="fas fa-sign-out-alt"></i>LeaveRP</a>
-    <a href="#rdmfreekillpainrp" data-bs-toggle="collapse" data-bs-target="#navRDM"><i class="fas fa-skull-crossbones"></i>RDM / FreeKill / PainRP</a>
-    <a href="#nlr" data-bs-toggle="collapse" data-bs-target="#navNLR"><i class="fas fa-ghost"></i>NLR</a>
-    <a href="#pgfearrp" data-bs-toggle="collapse" data-bs-target="#navPGFear"><i class="fas fa-eye"></i>PG / FearRP</a>
-    <a href="#mg" data-bs-toggle="collapse" data-bs-target="#navMG"><i class="fas fa-robot"></i>MG – NON‑RP обстановка</a>
-    <a href="#rpkfrpk" data-bs-toggle="collapse" data-bs-target="#navRPKFRPK"><i class="fas fa-user-shield"></i>RPK / FRPK</a>
-    <a href="#desertion" data-bs-toggle="collapse" data-bs-target="#navDesertion"><i class="fas fa-people-arrows"></i>Дезертирство</a>
-    <a href="#campingprison" data-bs-toggle="collapse" data-bs-target="#navCampingPrison"><i class="fas fa-campground"></i>Кемпинг / Плен</a>
-    <a href="#leaders" data-bs-toggle="collapse" data-bs-target="#navLeaders"><i class="fas fa-user-tie"></i>Лидеры группировок</a>
-    <a href="#reconops" data-bs-toggle="collapse" data-bs-target="#navReconOps"><i class="fas fa-binoculars"></i>Разведка / Спецоперации</a>
-    <a href="#zvz" data-bs-toggle="collapse" data-bs-target="#navZVZ"><i class="fas fa-shield-alt"></i>ZVZ</a>
-    <a href="#players" data-bs-toggle="collapse" data-bs-target="#navPlayers"><i class="fas fa-users"></i>Общие правила для игроков</a>
-    <a href="#admin" data-bs-toggle="collapse" data-bs-target="#navAdmin"><i class="fas fa-tools"></i>Администрация</a>
-    <a href="#factions" data-bs-toggle="collapse" data-bs-target="#navFactions"><i class="fas fa-people-carry-box"></i>Фракции</a>
-    <a href="#interaction" data-bs-toggle="collapse" data-bs-target="#navInteraction"><i class="fas fa-comment-dots"></i>Взаимодействие с администрацией</a>
-    <a href="#final" data-bs-toggle="collapse" data-bs-target="#navFinal"><i class="fas fa-flag-checkered"></i>Финальные положения</a>
+    <h4 class="sidebar-title">Правила сервера</h4>
+
+<!-- Кнопка → основной раздел -->
+    <button data-target="#main" class="nav-btn active"><i class="fas fa-cogs"></i> Основные правила</button>
+    <button data-target="#character" class="nav-btn"><i class="fas fa-user-tag"></i> Создание персонажа</button>
+    <button data-target="#identification" class="nav-btn"><i class="fas fa-id-badge"></i> Идентификация</button>
+    <button data-target="#chat" class="nav-btn"><i class="fas fa-comments"></i> Чат</button>
+    <button data-target="#harm" class="nav-btn"><i class="fas fa-skull-crossbones"></i> Вред серверу</button>
+
+    <!-- … остальные пункты -->
+    <button data-target="#final" class="nav-btn"><i class="fas fa-flag-checkered"></i> Финальные положения</button>
 </nav>
+
 
 <!-- Основной контент -->
 <div class="content">
 <h1 class="text-center mb-4">Правила Metro Reborn 2030</h1>
-
-<div id="accordionRules">
-
-    <!-- Основные правила -->
+<!-- Основные правила -->
     <section id="main" data-bs-parent="#accordionRules">
         <h2 class="mb-3">Основные правила</h2>
         <div class="card mb-3">
             <div class="card-header">Общие положения</div>
-            <div class="card-body"><p>За любую попытку обхода правил или использование их лазеек игрок должен сообщить об этом администрации, а не пытаться использовать ее. 
-			В ином случае вы можете получить за это наказание.
-		Не все нюансы правил могут быть вписаны, вы должны это понимать и следовать логике.
-</p><p>Правила могут меняться – проверяйте обновления.</p></div>
+            <div class="card-body"><p>За любые попытки обхода правил игрок должен сообщить об этом администрации, а не пытаться использовать лазейки. При нарушении возможны наказания.</p><p>Правила могут меняться – проверяйте обновления.</p></div>
         </div>
     </section>
 
@@ -92,21 +93,11 @@
         <h2 class="mb-3">Правила создания персонажа</h2>
         <div class="accordion" id="accordionChar">
             <div class="accordion-item"><h5 class="accordion-header" id="headingName"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseName">1️⃣ Имя и псевдонимы</button></h5>
-                <div id="collapseName" class="accordion-collapse collapse" aria-labelledby="headingName" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Допускается написание имя на Русском и Украинском языках с заглавной буквы.<p> Запрещено писать любые символы и/или латиницу (исключение описание персонажа, для указание значков или каких-то личных символов).
-				</p>1.2 Запрещено использовать в игровом никнейме не имеющие смысла/оскорбительные/имена(псевдонимы) знаменитостей, провокационные/комичные/не соответствующие к атмосфере метро/ключевых персонажей из трилогии имена.
-
-</p>НАПРИМЕР:
-Запрещено: Артем Черный, Хан, Хантер;
-Разрешено: Сказочник, Славик Меченый, Артем Хомяк.
-Исключение - при приобретении или получении лорных персонажей
-
-				</p></div></div>
+                <div id="collapseName" class="accordion-collapse collapse" aria-labelledby="headingName" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Допускается русск./украинское имя с заглавной буквы. Латиница, символы и оскорбительные имена запрещены (кроме лорных персонажей). При смене имени нужен RP‑доказатель.</p></div></div>
             </div>
 
-            <div class="accordion-item"><h5 class="accordion-header" id="headingPhys"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhys">2️⃣ Смена имени и псевдонима</button></h5>
-                <div id="collapsePhys" class="accordion-collapse collapse" aria-labelledby="headingPhys" data-bs-parent="#accordionChar"><div class="accordion-body"><p> 2.1 После RPK/FRPK Вы не можете поставить одно и то же имя.<p>2.3 Разрешено попросить Администрацию о смене имени, в случае опечатки/при вступлении в группировку/дезертирстве/ухода из группировки/если на вас ведется охота и угрожают расправой.
-				<p>ПРИМЕЧАНИЕ: При запросе об смене никнейма у Вас должно быть RP-доказательство. При отсутствие доказательств Администратор имеет право отказать Вам.
-</p></div></div>
+            <div class="accordion-item"><h5 class="accordion-header" id="headingPhys"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhys">2️⃣ Физика персонажа</button></h5>
+                <div id="collapsePhys" class="accordion-collapse collapse" aria-labelledby="headingPhys" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Описание должно содержать возраст, рост, цвет глаз и отличительные приметы. Персонажи младше 18 лет/с психическими отклонениями требуют одобрения администрации.</p></div></div>
             </div>
 
             <div class="accordion-item"><h5 class="accordion-header" id="headingTrauma"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrauma">3️⃣ Травмы и изменения</button></h5>
@@ -277,15 +268,8 @@
 </div><!-- /accordionRules -->
 </div><!-- /content -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-/* Highlight current section in sidebar */
-document.querySelectorAll('.sidebar a').forEach(link=>{
-  link.addEventListener('click',function(){
-    document.querySelectorAll('.sidebar a').forEach(a=>a.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-</script>
+    <footer>
+        © Kapitalist авторские права 2025
+    </footer>
 </body>
 </html>
