@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+
+    <!-- Основной CSS -->
+ <head>
+    <meta charset="UFT-8">
+    <Meta name="viewport" content="width=device-width, initial-scale=1.0>
+    <title>Game website</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/buttons.css">
+</head>
+
+    <!-- Свой скрипт -->
+    <script src="/Main.js" defer></script>
+<body>
+    <!-- Библиотека Bootstrap для красивого оформления -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<!-- Bootstrap 5 + FontAwesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"/>
+
+<style>
+    :root{
+        --bg:#111;
+        --card:#222;
+        --header:#333;
+        --accent:#ffb200;
+        --text:#eee;
+        --link:#ffb200;
+        --hover:rgba(255,178,0,.2);
+    }
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Arial,sans-serif;}
+    h1,h2,h3{color:var(--accent);}
+    .sidebar{
+        position:fixed;top:0;height:100%;width:260px;background:rgba(0,0,0,.9);
+        overflow-y:auto;padding-top:70px;border-right:1px solid var(--header);z-index:1030;
+    }
+    .sidebar a{display:flex;align-items:center;color:#bbb;font-size:.95rem;padding:12px 20px;text-decoration:none;}
+    .sidebar a:hover,.sidebar a.active{background:var(--hover);color:white;}
+    .sidebar i{margin-right:10px;width:18px;text-align:center;}
+    .content{margin-left:280px;padding:30px;}
+    .card{background:var(--card);border:none;margin-bottom:1rem;}
+    .card-header{background:var(--header);color:#ffffff;font-weight:bold;border-top-left-radius:.25rem;border-top-right-radius:.25rem;}
+    .card-body{color:#ffffff;background:var(--card);}
+    a{color:var(--link);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    /* Акордеон */
+    .accordion-button{background:var(--header);color:white;box-shadow:none;border-radius:0;}
+    .accordion-button:not(.collapsed){background:var(--accent);color:black;}
+</style>
+</head>
+
+<body>
+
+    
+<!-- =====  Боковая панель (sidebar) ===== -->
+<nav class="sidebar">
+    <h4 class="sidebar-title">Правила сервера</h4>
+
+<!-- Кнопка → основной раздел -->
+    <button data-target="#main" class="nav-btn active"><i class="fas fa-cogs"></i> Основные правила</button>
+    <button data-target="#character" class="nav-btn"><i class="fas fa-user-tag"></i> Создание персонажа</button>
+    <button data-target="#identification" class="nav-btn"><i class="fas fa-id-badge"></i> Идентификация</button>
+    <button data-target="#chat" class="nav-btn"><i class="fas fa-comments"></i> Чат</button>
+    <button data-target="#harm" class="nav-btn"><i class="fas fa-skull-crossbones"></i> Вред серверу</button>
+
+    <!-- … остальные пункты -->
+    <button data-target="#final" class="nav-btn"><i class="fas fa-flag-checkered"></i> Финальные положения</button>
+</nav>
+
+
+<!-- Основной контент -->
+<div class="content">
+<h1 class="text-center mb-4">Правила Metro Reborn 2030</h1>
+<!-- Основные правила -->
+    <section id="main" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Основные правила</h2>
+        <div class="card mb-3">
+            <div class="card-header">Общие положения</div>
+            <div class="card-body"><p>За любые попытки обхода правил игрок должен сообщить об этом администрации, а не пытаться использовать лазейки. При нарушении возможны наказания.</p><p>Правила могут меняться – проверяйте обновления.</p></div>
+        </div>
+    </section>
+
+    <!-- Создание персонажа -->
+    <section id="character" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила создания персонажа</h2>
+        <div class="accordion" id="accordionChar">
+            <div class="accordion-item"><h5 class="accordion-header" id="headingName"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseName">1️⃣ Имя и псевдонимы</button></h5>
+                <div id="collapseName" class="accordion-collapse collapse" aria-labelledby="headingName" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Допускается русск./украинское имя с заглавной буквы. Латиница, символы и оскорбительные имена запрещены (кроме лорных персонажей). При смене имени нужен RP‑доказатель.</p></div></div>
+            </div>
+
+            <div class="accordion-item"><h5 class="accordion-header" id="headingPhys"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhys">2️⃣ Физика персонажа</button></h5>
+                <div id="collapsePhys" class="accordion-collapse collapse" aria-labelledby="headingPhys" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Описание должно содержать возраст, рост, цвет глаз и отличительные приметы. Персонажи младше 18 лет/с психическими отклонениями требуют одобрения администрации.</p></div></div>
+            </div>
+
+            <div class="accordion-item"><h5 class="accordion-header" id="headingTrauma"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrauma">3️⃣ Травмы и изменения</button></h5>
+                <div id="collapseTrauma" class="accordion-collapse collapse" aria-labelledby="headingTrauma" data-bs-parent="#accordionChar"><div class="accordion-body"><p>При получении травм обязательно прописывайте их в описании. Враги/пленники могут менять описание только с вескими RP‑причинами. Серьёзные травмы рассматриваются администратором.</p></div></div>
+            </div>
+
+            <div class="accordion-item"><h5 class="accordion-header" id="headingFaction"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaction">4️⃣ Фракции</button></h5>
+                <div id="collapseFaction" class="accordion-collapse collapse" aria-labelledby="headingFaction" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Сталкеры не могут ставить ранг в позывных. Взаимодействие с персонажами одной фракции из другого профа запрещено без согласия администрации.</p></div></div>
+            </div>
+
+            <div class="accordion-item"><h5 class="accordion-header" id="headingPunish"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePunish">5️⃣ Наказания</button></h5>
+                <div id="collapsePunish" class="accordion-collapse collapse" aria-labelledby="headingPunish" data-bs-parent="#accordionChar"><div class="accordion-body"><p>Грубое нарушение – бан 6‑12 ч. Серьёзное – 1‑5 дней. Отказ от изменения описания может привести к RPK.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Идентификация -->
+    <section id="identification" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила идентификации</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Идентификация по описанию и голосу</div><div class="card-body"><p>Необходимо минимум два разговора >10 мин. При маске/противогазе – 15 мин.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Публичное представление</div><div class="card-body"><p>Нельзя заставлять представиться через механику. При попытке – наказание.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Неправильное использование описания</div><div class="card-body"><p>Не опознать персонажа по невидимым признакам (татуировка под комбинезоном) или снаряжению.</p></div></div>
+        <div class="card mb-3"><div class="card-header">4️⃣ Наказания</div><div class="card-body"><p>Бан 5‑10 ч. При грубом нарушении – 10‑30 дней.</p></div></div>
+    </section>
+
+    <!-- Чат -->
+    <section id="chat" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила чата</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Команды и их назначение</div><div class="card-body"><p>/LOOC, /OOC – non‑RP; /pm, /radiochat, /me, /it, /try – RP.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Оскорбления и флуд</div><div class="card-body"><p>Запрещены оскорбления, провокации, спам. CAPS LOCK допускается в ограниченных случаях.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 4‑12 ч. При грубом нарушении – 1‑3 дня.</p></div></div>
+    </section>
+
+    <!-- Вред серверу -->
+    <section id="harm" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Вред серверу (метагейминг, баги, читы)</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Мультиаккаунты и читерство</div><div class="card-body"><p>Запрещено использовать более одного аккаунта. Читы/баги дают преимущество – караются.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Мошенничество и продажа валюты</div><div class="card-body"><p>Запрещено продавать виртуальные предметы за реальную валюту.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан до перманентной блокировки. При нахождении серьезных багов возможна награда.</p></div></div>
+    </section>
+
+    <!-- Non‑RP / Fun RP -->
+    <section id="nonrpfun" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Non‑RP / Fun RP правила</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Терминология и поведение</div><div class="card-body"><p>Запрещено использовать Non‑RP терминов в RP. Не стоит имитировать голос, музыку.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Убийства и RPK</div><div class="card-body"><p>Не убивайте союзников без веской причины. При убийстве в плену – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 2‑6 дней. При грубом нарушении – 5‑14 дней.</p></div></div>
+    </section>
+
+    <!-- LeaveRP -->
+    <section id="leaverp" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">LeaveRP (выход из RP)</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Что запрещено</div><div class="card-body"><p>Симулировать краш, выходить во время перестрелки без причины.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Процедура выхода</div><div class="card-body"><p>Сообщите в Discord администратору, дайте доказательства. При отсутствии ответа – блокировка.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 3‑10 дней, возможен удаление персонажа.</p></div></div>
+    </section>
+
+    <!-- RDM / FreeKill / PainRP -->
+    <section id="rdmfreekillpainrp" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">RDM / Free Kill / PainRP правила</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Убийство по механике игры (RDM)</div><div class="card-body"><p>Может быть убит, если игрок угрожает вашей жизни. При некомплаенсе – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Free Damage</div><div class="card-body"><p>Можно наносить урон только с вескими RP‑причинами. Без причины – бан 2‑5 дней.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ PainRP</div><div class="card-body"><p>При любом значительном ранении нужно отыгрывать боль. При игнорировании – бан 3‑5 дней.</p></div></div>
+    </section>
+
+    <!-- NLR -->
+    <section id="nlr" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">NLR (Непрерывный Логический Режим)</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ После смерти</div><div class="card-body"><p>После любой смерти игрок забывает последние 10 минут жизни и отыгрывает тяжелое ранение на ближайшей Зеленой Зоне.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Бан 5‑10 дней.</p></div></div>
+    </section>
+
+    <!-- PG / FearRP -->
+    <section id="pgfearrp" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">PG / FearRP правила</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ PowerGaming (PG)</div><div class="card-body"><p>Запрещено вступать в перестрелку с превосходящими вас силами без приказа. При некомплаенсе – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ FearRP</div><div class="card-body"><p>Игрок должен отыгрывать страх и сохранять инстинкт самосохранения. При игнорировании – бан 4‑8 дней.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 8‑15 дней (PG) и 4‑8 дней (FearRP).</p></div></div>
+    </section>
+
+    <!-- MG -->
+    <section id="mg" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">MG – Передача RP‑информации в NON‑RP обстановке</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Использование сторонних программ связи</div><div class="card-body"><p>Запрещено использовать внешние каналы для получения RP‑информации.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Бан 8‑20 дней. При грубом нарушении – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- RPK / FRPK -->
+    <section id="rpkfrpk" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">RPK / FRPK правила</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Что такое RPK и FRPK</div><div class="card-body"><p>RPK – полное удаление персонажа. FRPK – смена ника, истории, внешности.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Процедура и доказательства</div><div class="card-body"><p>Для RPK требуется 3 весомых причины, подтверждённые скриншотами/демо. При попытке уйти от RP‑смерти – бан 10 дней.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 5‑30 дней, возможен удаление персонажа.</p></div></div>
+    </section>
+
+    <!-- Дезертирство -->
+    <section id="desertion" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Дезертирство и выход из группировки</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Условия дезертирства</div><div class="card-body"><p>Минимум 7 дней в группе + минимум час онлайн каждый день. При нарушении – удаление персонажа и бан.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Документы и скрытие</div><div class="card-body"><p>При выходе нельзя забрать более 10 000 пуль. При уклонении от охоты – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 5‑15 дней. При грубом нарушении – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- Кемпинг / Плен -->
+    <section id="campingprison" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Кемпинг и плен</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Правила кемпинга</div><div class="card-body"><p>Запрещено устанавливаться у станций, аванпостов и лутовых зон. Исключения – спецоперации.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Правила плена</div><div class="card-body"><p>В плене максимум 6 ч. Необходимо отыгрывать допрос, не давать еды/воду без причины. При игнорировании – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Кемпинг – 5‑10 дней. Плен – 10‑15 дней.</p></div></div>
+    </section>
+
+    <!-- Лидеры -->
+    <section id="leaders" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила лидеров группировок</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Обязанности и срок полномочий</div><div class="card-body"><p>Лидер обязан присутствовать минимум 2 недели. При отсутствии – 1 варн.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Варны: 1 varn = 3 предупреждения. При превышении – бан/чс.</p></div></div>
+    </section>
+
+    <!-- Разведка / Спецоперации -->
+    <section id="reconops" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Разведка и спецоперации</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Правила разведки</div><div class="card-body"><p>Максимум 4 разведчика, максимум 6 ч в день. Не участвовать в перестрелках.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Спецоперации и рейды</div><div class="card-body"><p>Требуется согласие администрации. Ограничения по количеству сторон, PG‑правила.</p></div></div>
+        <div class="card mb-3"><div class="card-header">3️⃣ Наказания</div><div class="card-body"><p>Бан 8‑20 дней. При грубом нарушении – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- ZVZ -->
+    <section id="zvz" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила Зеленой Зоны (ZVZ)</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Взятие базы и стрельба</div><div class="card-body"><p>Запрещено нападать без согласия. Истребление – RPK.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Бан 10‑20 дней. При грубом нарушении – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- Общие правила для игроков -->
+    <section id="players" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Общие правила для игроков</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Общее поведение</div><div class="card-body"><p>Уважение к другим, отсутствие токсичности. Оскорбления и реклама сторонних проектов – бан.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Бан 30‑90 дней. При повторных нарушениях – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- Администрация -->
+    <section id="admin" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила администрации</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Обязанности и принципы работы</div><div class="card-body"><p>Вежливость, нейтральность, отсутствие личных преимуществ. Любые изменения – только после согласования.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Проверка и дисциплина. При нарушении – выговор/бан.</p></div></div>
+    </section>
+
+    <!-- Фракции -->
+    <section id="factions" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Правила фракций (Ганза, Полис, Красная Линия и т.д.)</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Общие принципы</div><div class="card-body"><p>Фракции имеют собственные правила, но все они должны соблюдать общие правила сервера.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Варн/бан в зависимости от тяжести нарушения. При грубом нарушении – 5‑10 дней бан.</p></div></div>
+    </section>
+
+    <!-- Взаимодействие с администрацией -->
+    <section id="interaction" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Взаимодействие с администрацией</h2>
+        <div class="card mb-3"><div class="card-header">1️⃣ Общение и жалобы</div><div class="card-body"><p>Жалобы в Discord. Оскорбления администрации – бан до перманентной блокировки.</p></div></div>
+        <div class="card mb-3"><div class="card-header">2️⃣ Наказания</div><div class="card-body"><p>Бан 30‑90 дней. При повторных нарушениях – перманентная блокировка.</p></div></div>
+    </section>
+
+    <!-- Финальные положения -->
+    <section id="final" data-bs-parent="#accordionRules">
+        <h2 class="mb-3">Финальные положения</h2>
+        <p>Правила могут изменяться. При сомнениях руководствуйтесь логикой и здравым смыслом.</p>
+    </section>
+
+</div><!-- /accordionRules -->
+</div><!-- /content -->
+
+    <footer>
+        © Kapitalist авторские права 2025
+    </footer>
+</body>
+</html>
